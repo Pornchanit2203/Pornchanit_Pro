@@ -2,6 +2,7 @@
 //npm install express sequelize sqlite3
 //Run this file with node Sequlize sqlite3
 //Test with Postman
+require("dotenv").config();
 
 const express = require('express');
 const Sequelize = require('sequelize');
@@ -104,4 +105,4 @@ app.delete('/books/:id', (req, res) => {
 
 //start the server
 const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`listening on port ${port}...`));
+app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
